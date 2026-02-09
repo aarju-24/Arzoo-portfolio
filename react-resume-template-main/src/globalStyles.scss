@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -------------------------
+   Global Base Styles
+-------------------------- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-textPrimary font-sans text-base antialiased;
+}
+
+/* -------------------------
+   Typography
+-------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-semibold text-textPrimary;
+}
+
+p {
+  @apply text-textSecondary leading-relaxed;
+}
+
+/* -------------------------
+   Links & Buttons
+-------------------------- */
+
+a {
+  @apply text-primary underline-offset-4 hover:underline;
+}
+
+button {
+  @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2;
+}
+
+/* -------------------------
+   Cards & Borders
+-------------------------- */
+
+.card {
+  @apply bg-white border border-border rounded-lg shadow-card;
+}
+
+/* -------------------------
+   Selection Styling
+-------------------------- */
+
+::selection {
+  background-color: #dbeafe;
+  color: #1e3a8a;
+}
+
+/* -------------------------
+   Disable Flashy Effects
+-------------------------- */
+
+* {
+  animation: none !important;
+  transition-property: color, background-color, border-color, opacity;
+  transition-duration: 150ms;
+  transition-timing-function: ease-in-out;
+}
+
+/* -------------------------
+   Disable Automatic Dark Mode
+-------------------------- */
+
+:root {
+  color-scheme: light;
+}
